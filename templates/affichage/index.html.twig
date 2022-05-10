@@ -1,0 +1,24 @@
+{% extends 'template.html.twig'%}
+{% block body %}
+    <div class="row">
+    {% for i in 0..count-1 %}
+<div class="card text-white {% if i is odd %}bg-danger {% else %} bg-info{% endif %} mb-3" style="max-width: 18rem;">
+<div class="card-header">
+    {% for next in names[i]%}
+    {{next.title}},
+    {% endfor %}
+</div>
+
+<div class="card-body">
+    <h5 class="card-title">
+        {{pfes[i].nbr}} PFEs
+    </h5>
+    <h5 class="card-title">
+        {{names[i][0].entreprise.designation}}
+    </h5>
+</div>
+</div>
+    {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Examen TP</title>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{asset("css/styles.css")}}" rel="stylesheet" />
+</head>
+<body>
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+            <ul class="navbar-nav ">
+                <li class="nav-item"><a class="nav-link" href="{{path('app_show')}}">Liste De PFEs</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{path('app_pfe')}}">Ajouter un PFE</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{path('app_affichage')}}">Stats</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Page content-->
+{% block body%}
+BootStrap
+{% endblock %}
+<!-- Bootstrap core JS-->
+<script src="{{asset('node_modules/bootstrap/dist/css/bootstrap.css')}}"></script>
+<!-- Core theme JS-->
+<script src="{{asset('js/scripts.js')}}"></script>
+</body>
+</html>
