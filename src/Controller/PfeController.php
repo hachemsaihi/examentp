@@ -22,7 +22,7 @@ class PfeController extends AbstractController
             $manager=$doc->getManager();
             $manager->persist($pfe);
             $manager->flush();
-            return $this->redirectToRoute("app_affichage");
+            return $this->redirectToRoute("app_show");
         }
         return $this->render('pfe/index.html.twig', [
             'form' => $form->createView(),

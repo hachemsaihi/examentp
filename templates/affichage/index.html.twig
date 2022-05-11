@@ -1,6 +1,6 @@
 {% extends 'template.html.twig'%}
 {% block body %}
-    <div class="row">
+    <div class="row" style="justify-content: space-evenly">
     {% for i in 0..count-1 %}
 <div class="card text-white {% if i is odd %}bg-danger {% else %} bg-info{% endif %} mb-3" style="max-width: 18rem;">
 <div class="card-header">
