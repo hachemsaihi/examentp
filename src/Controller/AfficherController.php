@@ -9,12 +9,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AffichageController extends AbstractController
+class AfficherController extends AbstractController
 {
-    #[Route('/affichage', name: 'app_affichage')]
+    #[Route('/', name: 'afficher')]
     public function index(ManagerRegistry $doc): Response
     {$repo=$doc->getRepository(PFE::class);
         $pfes=$repo->findByExampleField();
+        dd($pfes);
         $names=array();
         $repo1=$doc->getRepository(Entreprise::class);
 
@@ -31,15 +32,6 @@ class AffichageController extends AbstractController
             'pfes' => $pfes,
             'names'=>$names,
             'count'=>count($pfes)
-        ]);
-    }
-    #[Route('/affichage2', name: 'app_show')]
-    public function ind(ManagerRegistry $doc): Response
-    {   $repo=$doc->getRepository(PFE::class);
-        $pfes=$repo->findAll();
-
-        return $this->render('affichage/index2.html.twig', [
-            'pfes' => $pfes,
         ]);
     }
 }
